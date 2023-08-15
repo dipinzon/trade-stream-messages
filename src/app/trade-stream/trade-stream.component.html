@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Trade Positions</h2>
+  <p>Last Updated: {{ lastUpdated | date: 'medium' }}</p>
+  <div *ngFor="let accountEntry of groupedTrades | keyvalue" class="account-section">
+    <h3>Account: {{ accountEntry.key }}</h3>
+    <ul class="security-list">
+      <li *ngFor="let securityEntry of accountEntry.value | keyvalue" class="security-entry">
+        Security: {{ securityEntry.key }} - Position: {{ securityEntry.value }}
+      </li>
+    </ul>
+  </div>
+</div>
