@@ -5,7 +5,6 @@ export class TradeMessage {
   account: any;
   securityId: any;
   qty: any;
-  // Define the properties similar to the TradeMessage class in the Spring Boot app
 }
 
 @Injectable({
